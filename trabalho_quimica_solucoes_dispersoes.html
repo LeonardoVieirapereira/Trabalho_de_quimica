@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101827">
+<title>Química | Soluções e Dispersões</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root{--bg:#0b1220;--panel:#131f32;--panel2:#192941;--text:#eef5ff;--muted:#a9b8cc;--cyan:#55d6d0;--blue:#7ba7ff;--gold:#ffd27a;--line:rgba(255,255,255,.1)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 85% 5%,#1b3551 0,transparent 28%),radial-gradient(circle at 5% 70%,#15333b 0,transparent 25%),var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;min-height:100vh}
+button{font:inherit}.shell{max-width:1120px;margin:auto;padding:24px 22px 100px}.top{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:32px}.brand{display:flex;align-items:center;gap:11px;font-family:Manrope,sans-serif;font-weight:800;letter-spacing:.3px}.brandmark{width:40px;height:40px;border-radius:13px;background:linear-gradient(135deg,var(--cyan),var(--blue));display:grid;place-items:center;color:#081321;font-size:21px;box-shadow:0 8px 30px #55d6d033}.tag{color:var(--cyan);font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:700}
+.progress{height:4px;background:#ffffff12;border-radius:9px;overflow:hidden;margin:0 0 25px}.bar{height:100%;width:20%;background:linear-gradient(90deg,var(--cyan),var(--blue));transition:width .4s}
+.page{display:none;animation:enter .45s ease}.page.active{display:block}@keyframes enter{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.hero{padding:clamp(25px,5vw,55px);border:1px solid var(--line);border-radius:28px;background:linear-gradient(130deg,#172a42ed,#102033e8);position:relative;overflow:hidden;min-height:350px;display:flex;align-items:center}.hero:after{content:"";position:absolute;width:330px;height:330px;border-radius:50%;right:4%;top:8%;background:radial-gradient(circle,#55d6d044,transparent 68%);filter:blur(5px)}.hero-content{position:relative;z-index:1;max-width:650px}.eyebrow{color:var(--cyan);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:12px}h1,h2,h3{font-family:Manrope,sans-serif}h1{font-size:clamp(38px,7vw,70px);line-height:1.03;margin:17px 0}h1 span{color:var(--cyan)}.lead{color:var(--muted);font-size:17px;line-height:1.75;max-width:610px}.hero-art{position:absolute;right:8%;bottom:14%;width:230px;height:190px;z-index:0;opacity:.9}.orb{position:absolute;border-radius:50%;border:1px solid #55d6d077;box-shadow:inset 0 0 30px #55d6d022,0 0 35px #55d6d022;animation:float 5s ease-in-out infinite}.orb.one{width:120px;height:120px;right:30px;top:10px}.orb.two{width:70px;height:70px;right:115px;top:80px;animation-delay:-2s}.orb.three{width:42px;height:42px;right:0;top:105px;animation-delay:-1s}@keyframes float{50%{transform:translateY(-15px)}}
+.section-head{margin:35px 0 18px}.section-head h2{font-size:clamp(25px,4vw,36px);margin:8px 0}.section-head p{color:var(--muted);line-height:1.65;margin:0}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card{background:linear-gradient(145deg,var(--panel),#101a2a);border:1px solid var(--line);border-radius:20px;padding:22px;transition:.25s}.card:hover{transform:translateY(-4px);border-color:#55d6d066}.card h3{margin:10px 0;font-size:20px}.card p,.card li{color:var(--muted);line-height:1.7}.iconbox{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:#55d6d01b;color:var(--cyan);font-size:22px}.callout{border-left:3px solid var(--cyan);padding:15px 18px;background:#55d6d00d;border-radius:0 14px 14px 0;color:#dcecf5;line-height:1.7;margin:20px 0}.example{display:flex;gap:14px;align-items:center;margin-top:14px;padding:13px;background:#ffffff08;border-radius:14px}.example strong{display:block}.example small{color:var(--muted);line-height:1.5}.sample{width:50px;height:55px;border:2px solid #a8c5dc88;border-top:0;border-radius:4px 4px 12px 12px;position:relative;flex:none;overflow:hidden}.sample:before{content:"";position:absolute;bottom:0;left:0;right:0;height:65%;background:linear-gradient(180deg,#55d6d099,#55d6d033)}.sample.cloudy:before{background:linear-gradient(180deg,#ffd27a99,#ffd27a33)}.sample.dots:after{content:"";position:absolute;inset:15px 8px;background:radial-gradient(circle,#fff 1.5px,transparent 2px);background-size:10px 10px}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:18px;margin-top:18px}table{border-collapse:collapse;width:100%;min-width:600px;background:#111d2e}th,td{text-align:left;padding:15px 17px;border-bottom:1px solid var(--line);line-height:1.55}th{color:var(--cyan);font-size:13px;text-transform:uppercase;letter-spacing:1px}td{color:var(--muted)}td:first-child{color:var(--text);font-weight:700}tr:last-child td{border-bottom:0}
+.diagram{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;padding:22px;background:#ffffff06;border-radius:18px;margin:20px 0}.beaker{width:110px;height:125px;border:3px solid #b9d2e5;border-top:0;border-radius:4px 4px 22px 22px;position:relative;overflow:hidden}.liquid{position:absolute;bottom:0;left:0;right:0;height:60%;background:linear-gradient(180deg,#55d6d077,#55d6d022)}.particle{position:absolute;width:5px;height:5px;background:#dffcff;border-radius:50%;box-shadow:0 0 8px #55d6d0}.p1{left:20px;bottom:25px}.p2{left:55px;bottom:45px}.p3{right:20px;bottom:30px}.p4{left:38px;bottom:65px}.beaker.susp .particle{width:10px;height:10px;background:var(--gold);box-shadow:none}.arrow{color:var(--cyan);font-size:25px}.diagram-label{text-align:center;color:var(--muted);font-size:13px;max-width:130px}
+.nav{position:fixed;bottom:0;left:0;right:0;padding:14px 20px;background:#0b1220eF;border-top:1px solid var(--line);backdrop-filter:blur(15px);z-index:5}.navinner{max-width:1120px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}.nav button{border:1px solid var(--line);background:var(--panel);color:var(--text);padding:12px 18px;border-radius:12px;cursor:pointer;transition:.2s}.nav button:hover{border-color:var(--cyan);background:#1b3446}.nav button:disabled{opacity:.35;cursor:not-allowed}.counter{color:var(--muted);font-size:13px}.dots{display:flex;gap:7px}.dot{width:7px;height:7px;border-radius:20px;background:#ffffff30;transition:.25s}.dot.on{width:22px;background:var(--cyan)}
+.quiz-option{display:block;width:100%;text-align:left;padding:14px 16px;border:1px solid var(--line);background:#ffffff08;color:var(--text);border-radius:13px;margin:9px 0;cursor:pointer}.quiz-option:hover{border-color:var(--cyan)}.quiz-option.correct{border-color:#69dba2;background:#69dba21a}.quiz-option.wrong{border-color:#ff8b8b;background:#ff8b8b12}.feedback{color:var(--muted);min-height:26px;margin-top:12px}
+.footer-note{color:#8193aa;font-size:12px;text-align:center;margin-top:35px}
+@media(max-width:700px){.shell{padding:17px 14px 100px}.top{margin-bottom:20px}.hero{min-height:390px;align-items:flex-start}.hero-art{right:4%;bottom:4%;transform:scale(.75);transform-origin:bottom right;opacity:.55}.grid{grid-template-columns:1fr}.lead{font-size:15px}.nav{padding:11px 12px}.nav button{padding:11px 13px}.dots{display:none}.counter{font-size:12px}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="top"><div class="brand"><div class="brandmark">⚗</div><span>QUÍMICA<span style="color:var(--cyan)">LAB</span></span></div><div class="tag">Material de estudo · Química</div></header>
+<div class="progress"><div class="bar" id="bar"></div></div>
+
+<section class="page active">
+ <div class="hero"><div class="hero-content"><div class="eyebrow">Misturas e sistemas químicos</div><h1>Soluções <span>&</span><br>Dispersões</h1><p class="lead">Entenda como as substâncias se misturam, como identificar soluções eletrolíticas e não eletrolíticas e qual é a diferença entre soluções, suspensões e dispersões.</p></div><div class="hero-art"><div class="orb one"></div><div class="orb two"></div><div class="orb three"></div></div></div>
+ <div class="section-head"><div class="eyebrow">Roteiro do conteúdo</div><h2>O que vamos estudar?</h2><p>Use as setas na tela ou do teclado para navegar pelas páginas.</p></div>
+ <div class="grid">
+  <div class="card"><div class="iconbox">💧</div><h3>01 · Soluções</h3><p>Misturas homogêneas formadas por soluto e solvente.</p></div>
+  <div class="card"><div class="iconbox">⚡</div><h3>02 · Eletrolíticas</h3><p>Soluções que conduzem corrente elétrica por apresentarem íons móveis.</p></div>
+  <div class="card"><div class="iconbox">🔹</div><h3>03 · Não eletrolíticas</h3><p>Soluções que não formam íons em quantidade significativa e não conduzem corrente de modo apreciável.</p></div>
+  <div class="card"><div class="iconbox">🫧</div><h3>04 · Suspensão e dispersão</h3><p>Sistemas com partículas distribuídas em outra substância.</p></div>
+ </div>
+ <div class="callout"><strong>Ideia principal:</strong> o tamanho das partículas e a capacidade de formar íons ajudam a classificar diferentes misturas.</div>
+</section>
+
+<section class="page">
+ <div class="section-head"><div class="eyebrow">Página 02 · Conceito básico</div><h2>O que são soluções?</h2><p>Uma solução é uma mistura homogênea, ou seja, apresenta apenas uma fase visível e composição uniforme em toda a sua extensão.</p></div>
+ <div class="grid">
+  <div class="card"><div class="iconbox">🧂</div><h3>Soluto</h3><p>É a substância que é dissolvida. Geralmente aparece em menor quantidade.</p><div class="example"><div class="sample"></div><div><strong>Exemplo: sal</strong><small>Quando colocado na água, o sal se dissolve e forma uma solução.</small></div></div></div>
+  <div class="card"><div class="iconbox">🥛</div><h3>Solvente</h3><p>É a substância que dissolve o soluto. Geralmente aparece em maior quantidade.</p><div class="example"><div class="sample"></div><div><strong>Exemplo: água</strong><small>Na água salgada, ela é o solvente.</small></div></div></div>
+ </div>
+ <div class="section-head"><h2>Como a solução se forma?</h2><p>Ao misturar sal e água e mexer, as partículas do sal se distribuem pela água. O resultado é uma mistura uniforme.</p></div>
+ <div class="diagram"><div><div class="beaker"><div class="liquid" style="height:30%"></div></div><div class="diagram-label">Água + sal</div></div><div class="arrow">→</div><div><div class="beaker"><div class="liquid"></div><i class="particle p1"></i><i class="particle p2"></i><i class="particle p3"></i><i class="particle p4"></i></div><div class="diagram-label">Solução homogênea</div></div></div>
+ <div class="callout">Atenção: uma solução pode ser sólida, líquida ou gasosa. O exemplo mais comum no cotidiano é a solução líquida, como água com açúcar.</div>
+</section>
+
+<section class="page">
+ <div class="section-head"><div class="eyebrow">Página 03 · Condução elétrica</div><h2>Soluções eletrolíticas</h2><p>São soluções que conduzem corrente elétrica porque possuem íons livres para se movimentar. Esses íons podem surgir quando uma substância se dissolve em água ou reage com ela.</p></div>
+ <div class="grid">
+  <div class="card"><div class="iconbox">⚡</div><h3>Por que conduzem?</h3><p>Os íons positivos (cátions) e negativos (ânions) movimentam-se na solução e transportam cargas elétricas.</p></div>
+  <div class="card"><div class="iconbox">🧪</div><h3>Exemplos</h3><p>Água com sal de cozinha dissolvido e soluções aquosas de ácidos e bases, como vinagre diluído e algumas soluções de hidróxido de sódio.</p></div>
+ </div>
+ <div class="section-head"><h2>O que acontece com o sal?</h2><p>O cloreto de sódio, ao se dissolver em água, separa-se em íons sódio e cloreto. A presença desses íons permite a condução elétrica.</p></div>
+ <div class="diagram"><div class="beaker"><div class="liquid"></div><i class="particle p1"></i><i class="particle p2"></i><i class="particle p3"></i><i class="particle p4"></i></div><div class="arrow">⚡</div><div style="max-width:240px;color:var(--muted);line-height:1.6"><strong style="color:var(--text)">Íons em movimento</strong><br>Na⁺ e Cl⁻ ficam dispersos na água e podem transportar cargas elétricas.</div></div>
+ <div class="callout"><strong>Importante:</strong> água pura conduz muito pouco a eletricidade. A condução aumenta quando há íons dissolvidos. Não faça testes com tomadas ou aparelhos ligados à rede elétrica.</div>
+</section>
+
+<section class="page">
+ <div class="section-head"><div class="eyebrow">Página 04 · Sem formação de íons</div><h2>Soluções não eletrolíticas</h2><p>São soluções que não conduzem corrente elétrica de maneira significativa, pois o soluto se dissolve sem formar íons. As partículas permanecem principalmente como moléculas neutras.</p></div>
+ <div class="grid">
+  <div class="card"><div class="iconbox">🍬</div><h3>Exemplo: água com açúcar</h3><p>O açúcar se dissolve e suas moléculas ficam distribuídas na água, mas não se transformam em íons. Por isso, a solução praticamente não conduz eletricidade.</p><div class="example"><div class="sample"></div><div><strong>Mistura homogênea</strong><small>O açúcar desaparece visualmente, mas continua presente na solução.</small></div></div></div>
+  <div class="card"><div class="iconbox">🧬</div><h3>Características</h3><ul><li>Apresentam uma única fase.</li><li>O soluto fica distribuído no solvente.</li><li>Não possuem quantidade significativa de íons móveis.</li><li>Exemplos: água com glicose ou sacarose.</li></ul></div>
+ </div>
+ <div class="callout">Não confunda dissolver com ionizar: uma substância pode se dissolver completamente sem produzir íons. É o caso do açúcar na água.</div>
+</section>
+
+<section class="page">
+ <div class="section-head"><div class="eyebrow">Página 05 · Mistura heterogênea</div><h2>Suspensão</h2><p>Suspensão é uma mistura heterogênea em que partículas relativamente grandes ficam espalhadas em um líquido ou gás. Com o tempo, muitas dessas partículas podem se depositar no fundo.</p></div>
+ <div class="grid">
+  <div class="card"><div class="iconbox">🌫️</div><h3>Características</h3><ul><li>Não apresenta aspecto totalmente uniforme.</li><li>As partículas podem ser vistas a olho nu ou com facilidade.</li><li>Pode ocorrer sedimentação.</li><li>Pode ser separada por métodos como filtração, dependendo do material.</li></ul></div>
+  <div class="card"><div class="iconbox">🥤</div><h3>Exemplos</h3><p>Água barrenta, suco de fruta com polpa e areia misturada à água.</p><div class="example"><div class="sample cloudy dots"></div><div><strong>Água + areia</strong><small>A areia não se dissolve e pode se acumular no fundo do recipiente.</small></div></div></div>
+ </div>
+ <div class="section-head"><h2>Observe a diferença</h2><p>Na suspensão, as partículas maiores podem descer e formar uma camada de sedimento.</p></div>
+ <div class="diagram"><div class="beaker susp"><div class="liquid" style="height:72%;background:linear-gradient(180deg,#ffd27a55,#ffd27a22)"></div><i class="particle p1"></i><i class="particle p2"></i><i class="particle p3"></i><i class="particle p4"></i><div style="position:absolute;bottom:0;left:0;right:0;height:9px;background:#d6a65b"></div></div><div class="arrow">→</div><div style="max-width:220px;color:var(--muted);line-height:1.6"><strong style="color:var(--text)">Sedimentação</strong><br>As partículas mais densas podem se depositar no fundo após algum tempo.</div></div>
+</section>
+
+<section class="page">
+ <div class="section-head"><div class="eyebrow">Página 06 · Conceito geral</div><h2>Dispersão</h2><p>Dispersão é um sistema em que uma substância, chamada fase dispersa, está distribuída em outra, chamada meio de dispersão ou fase contínua.</p></div>
+ <div class="grid">
+  <div class="card"><div class="iconbox">🔬</div><h3>Fase dispersa</h3><p>É a substância que está distribuída em pequenas partículas pelo sistema.</p></div>
+  <div class="card"><div class="iconbox">🌊</div><h3>Meio de dispersão</h3><p>É a substância na qual as partículas estão distribuídas.</p></div>
+ </div>
+ <div class="section-head"><h2>Tipos de dispersão</h2><p>Uma classificação comum considera o tamanho das partículas dispersas.</p></div>
+ <div class="grid">
+  <div class="card"><h3>Dispersão verdadeira (solução)</h3><p>Partículas muito pequenas; mistura homogênea. Exemplo: sal dissolvido em água.</p></div>
+  <div class="card"><h3>Dispersão coloidal</h3><p>Partículas de tamanho intermediário; pode parecer homogênea a olho nu, mas é um sistema heterogêneo em escala microscópica. Exemplo: leite e gelatina.</p></div>
+  <div class="card"><h3>Dispersão grosseira (suspensão)</h3><p>Partículas maiores, que podem sedimentar. Exemplo: água com areia.</p></div>
+  <div class="card"><h3>Exemplos do cotidiano</h3><p>Fumaça, neblina, espuma, leite, tinta e água barrenta são exemplos de diferentes sistemas dispersos.</p></div>
+ </div>
+ <div class="callout">Portanto, “dispersão” é um termo mais amplo: soluções, coloides e suspensões são classificações de sistemas dispersos.</div>
+</section>
+
+<section class="page">
+ <div class="section-head"><div class="eyebrow">Página 07 · Revisão</div><h2>Comparando os sistemas</h2><p>Confira as principais diferenças antes de finalizar o estudo.</p></div>
+ <div class="table-wrap"><table><thead><tr><th>Sistema</th><th>Tipo</th><th>Partículas / comportamento</th><th>Exemplo</th></tr></thead><tbody>
+ <tr><td>Solução eletrolítica</td><td>Homogênea</td><td>Possui íons móveis e conduz eletricidade.</td><td>Água com sal</td></tr>
+ <tr><td>Solução não eletrolítica</td><td>Homogênea</td><td>Soluto molecular; não conduz de forma significativa.</td><td>Água com açúcar</td></tr>
+ <tr><td>Suspensão</td><td>Heterogênea</td><td>Partículas grandes; podem sedimentar.</td><td>Água barrenta</td></tr>
+ <tr><td>Coloide</td><td>Heterogênea em escala microscópica</td><td>Partículas intermediárias; não sedimentam facilmente.</td><td>Leite</td></tr>
+ <tr><td>Dispersão</td><td>Termo geral</td><td>Uma fase distribuída em outra.</td><td>Fumaça, soluções e suspensões</td></tr>
+ </tbody></table></div>
+ <div class="section-head"><h2>Teste seus conhecimentos</h2><p>Escolha uma alternativa para cada questão e confira o resultado.</p></div>
+ <div class="card" id="quiz"><h3 id="qtitle">1. Qual mistura é uma solução não eletrolítica?</h3><div id="answers"></div><div class="feedback" id="feedback" aria-live="polite"></div><button onclick="nextQuestion()" id="next" style="display:none;margin-top:8px;background:var(--cyan);color:#081321;border:0;border-radius:11px;padding:11px 16px;font-weight:700;cursor:pointer">Próxima questão →</button></div>
+ <div class="footer-note">Trabalho escolar de Química · Soluções e dispersões</div>
+</section>
+</div>
+<nav class="nav"><div class="navinner"><button id="prev" onclick="move(-1)" disabled>← Anterior</button><div style="display:flex;align-items:center;gap:14px"><div class="dots" id="dots"></div><span class="counter" id="counter">Página 1 de 7</span></div><button id="nextPage" onclick="move(1)">Próxima →</button></div></nav>
+<script>
+const pages=[...document.querySelectorAll('.page')];let current=0;
+const bar=document.getElementById('bar'),counter=document.getElementById('counter'),prev=document.getElementById('prev'),nextPage=document.getElementById('nextPage'),dots=document.getElementById('dots');
+pages.forEach((_,i)=>{const d=document.createElement('span');d.className='dot'+(i===0?' on':'');dots.appendChild(d)});
+function showPage(n){current=Math.max(0,Math.min(pages.length-1,n));pages.forEach((p,i)=>p.classList.toggle('active',i===current));bar.style.width=((current+1)/pages.length*100)+'%';counter.textContent=`Página ${current+1} de ${pages.length}`;prev.disabled=current===0;nextPage.disabled=current===pages.length-1;[...dots.children].forEach((d,i)=>d.classList.toggle('on',i===current));window.scrollTo({top:0,behavior:'smooth'})}
+function move(d){showPage(current+d)}
+document.addEventListener('keydown',e=>{if(['ArrowRight','PageDown'].includes(e.key)){e.preventDefault();move(1)}if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();move(-1)}});
+const questions=[
+ {q:'1. Qual mistura é uma solução não eletrolítica?',a:['Água com sal','Água com açúcar','Água com areia'],correct:1,why:'O açúcar se dissolve como moléculas neutras, sem formar íons em quantidade significativa.'},
+ {q:'2. Por que uma solução de sal em água conduz eletricidade?',a:['Porque a água fica colorida','Porque existem íons móveis na solução','Porque o sal desaparece'],correct:1,why:'Os íons positivos e negativos transportam cargas elétricas pela solução.'},
+ {q:'3. Qual é um exemplo de suspensão?',a:['Água barrenta','Água com açúcar','Ar limpo'],correct:0,why:'A água barrenta contém partículas que não se dissolvem e podem sedimentar.'},
+ {q:'4. O que significa dispersão?',a:['Somente uma substância pura','Uma substância distribuída em outra','Apenas uma mistura de gases'],correct:1,why:'Dispersão é o sistema em que uma fase está distribuída em outra.'}
+];let qi=0,score=0,answered=false;
+function renderQuestion(){const q=questions[qi];document.getElementById('qtitle').textContent=q.q;const box=document.getElementById('answers');box.innerHTML='';document.getElementById('feedback').textContent='';document.getElementById('next').style.display='none';answered=false;q.a.forEach((a,i)=>{const b=document.createElement('button');b.className='quiz-option';b.textContent=a;b.onclick=()=>answer(i,b);box.appendChild(b)})}
+function answer(i,btn){if(answered)return;answered=true;const q=questions[qi];const opts=[...document.querySelectorAll('.quiz-option')];opts.forEach((o,j)=>{o.disabled=true;if(j===q.correct)o.classList.add('correct')});if(i===q.correct){score++;document.getElementById('feedback').textContent='Correto! '+q.why}else{btn.classList.add('wrong');document.getElementById('feedback').textContent='Não foi dessa vez. '+q.why}document.getElementById('next').style.display='inline-block';document.getElementById('next').textContent=qi===questions.length-1?'Ver resultado':'Próxima questão →'}
+function nextQuestion(){if(qi<questions.length-1){qi++;renderQuestion()}else{document.getElementById('qtitle').textContent=`Você acertou ${score} de ${questions.length} questões!`;document.getElementById('answers').innerHTML='<button class="quiz-option" onclick="qi=0;score=0;renderQuestion()">↻ Refazer atividade</button>';document.getElementById('feedback').textContent='Revise as páginas e tente novamente para fixar o conteúdo.';document.getElementById('next').style.display='none'}}
+renderQuestion();
+</script>
+</body>
+</html>
